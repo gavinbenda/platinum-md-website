@@ -50,7 +50,7 @@ export default {
   */
   fontawesome: {
     icons: {
-      brands: ['faApple', 'faWindows', 'faLinux'],
+      brands: ['faApple', 'faWindows', 'faLinux', 'faGithub'],
       solid: ['faExternalLinkAlt']
     }
   },

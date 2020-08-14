@@ -40,12 +40,12 @@
         </div>
       </div>
 
-      <div class="row mt-5">
+      <footer class="row mt-5">
           <div class="col-12">
-            Find us on GitHub
-            <img src="https://travis-ci.org/gavinbenda/platinum-md.svg?branch=master">
+            <a href="https://github.com/gavinbenda/platinum-md" target="_blank" class="pr-3"><font-awesome-icon :icon="['fab', 'github']" /> Platinum-MD on GitHub</a>
+            <a href="https://travis-ci.org/github/gavinbenda/platinum-md/"><img src="https://travis-ci.org/gavinbenda/platinum-md.svg?branch=master"></a>
           </div>
-      </div>
+      </footer>
 
     </div>
 

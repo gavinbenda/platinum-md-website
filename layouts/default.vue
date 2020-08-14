@@ -105,4 +105,16 @@ body {
   margin-top: 2rem;
 }
 
+footer {
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: #07281d;
+}
+
+footer a:hover {
+  color: #02100b;
+}
+
 </style>
