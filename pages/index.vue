@@ -1,20 +1,20 @@
 <template>
   <div class="container">
     <div>
-      <img src="~/assets/platinum-md-logo.png" class="img-fluid" alt="Platinum-MD">
+      <img src="~/assets/platinum-md-logo.png" class="img-fluid pt-3 pt-md-0" alt="Platinum-MD">
       <h1 class="title">
         Minidisc + NetMD Upload
       </h1>
       <h2 class="subtitle">
-        This project aims to make uploading audio files<br> to NetMD players seamless and automatic.
+        This project aims to make uploading audio files<br class="d-none d-sm-block"> to NetMD players seamless and automatic.
       </h2>
-      <div class="row h-100 justify-content-center align-items-center pt-5">
-        <div class="col-6">
+      <div class="row h-100 justify-content-center align-items-center pt-2 mt-md-5">
+        <div class="col-12 col-md-6">
           <img src="~/assets/platinum-md-screenshot.png" class="img-fluid" alt="Screenshot">
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div v-if="$device.isMacOS || $device.isIos">
-            <a href="https://github.com/gavinbenda/platinum-md/releases/download/v0.7.0-alpha/platinum-md-0.7.0.dmg" target="_blank" class="button--green download-button"><font-awesome-icon :icon="['fab', 'apple']" class="button-icon" /><span>Download for MacOS</span></a>
+            <a href="https://github.com/gavinbenda/platinum-md/releases/download/v0.7.0-alpha/platinum-md-0.7.0.dmg" target="_blank" class="button--green download-button px-5"><font-awesome-icon :icon="['fab', 'apple']" class="button-icon" /><span>Download for MacOS</span></a>
             <b-button v-b-modal.install-macos class="mt-3">Please read the Install Instructions <font-awesome-icon :icon="['fas', 'external-link-alt']" /></b-button>
           </div>
           <div v-else-if="$device.isWindows || $device.isMobile">
