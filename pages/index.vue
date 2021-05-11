@@ -14,11 +14,11 @@
         </div>
         <div class="col-12 col-md-6">
           <div v-if="$device.isMacOS || $device.isIos">
-            <a href="https://github.com/gavinbenda/platinum-md/releases/download/v1.1.0/platinum-md-1.1.0.dmg" target="_blank" class="button--green download-button px-5"><font-awesome-icon :icon="['fab', 'apple']" class="button-icon" /><span>Download for MacOS</span></a>
+            <a href="https://github.com/gavinbenda/platinum-md/releases/download/v1.2.0/platinum-md-1.2.0.dmg" target="_blank" class="button--green download-button px-5"><font-awesome-icon :icon="['fab', 'apple']" class="button-icon" /><span>Download for MacOS</span></a>
             <b-button v-b-modal.install-macos class="mt-3">Please read the Install Instructions <font-awesome-icon :icon="['fas', 'external-link-alt']" /></b-button>
           </div>
           <div v-else-if="$device.isWindows || $device.isMobile">
-            <a href="https://github.com/gavinbenda/platinum-md/releases/download/v0.7.0-alpha/platinum-md.Setup.0.7.0.exe" target="_blank" class="button--green"><font-awesome-icon :icon="['fab', 'windows']" class="button-icon" /><span>Download for Windows</span></a>
+            <a href="https://github.com/gavinbenda/platinum-md/releases/download/v1.2.0/platinum-md.Setup.1.2.0.exe" target="_blank" class="button--green"><font-awesome-icon :icon="['fab', 'windows']" class="button-icon" /><span>Download for Windows</span></a>
             <b-button v-b-modal.install-windows class="mt-3">Please read the Install Instructions <font-awesome-icon :icon="['fas', 'external-link-alt']" /></b-button>
           </div>
           <div v-else>
@@ -28,10 +28,10 @@
           <div class="other-platforms">
             <h3>Also available for other platforms</h3>
             <div v-if="!$device.isMacOS">
-              <a href="https://github.com/gavinbenda/platinum-md/releases/download/v1.1.0/platinum-md-1.1.0.dmg" target="_blank"><font-awesome-icon :icon="['fab', 'apple']" /> Download for MacOS</a>
+              <a href="https://github.com/gavinbenda/platinum-md/releases/download/v1.2.0/platinum-md-1.2.0.dmg" target="_blank"><font-awesome-icon :icon="['fab', 'apple']" /> Download for MacOS</a>
             </div>
             <div v-if="!$device.isWindows">
-              <a href="https://github.com/gavinbenda/platinum-md/releases/download/v0.7.0-alpha/platinum-md.Setup.0.7.0.exe" target="_blank"><font-awesome-icon :icon="['fab', 'windows']" /> Download for Windows</a>
+              <a href="https://github.com/gavinbenda/platinum-md/releases/download/v1.2.0/platinum-md.Setup.1.2.0.exe" target="_blank"><font-awesome-icon :icon="['fab', 'windows']" /> Download for Windows</a>
             </div>
             <div v-if="$device.isWindows || $device.isMacOS">
               <a href="https://github.com/gavinbenda/platinum-md/releases/download/v0.7.0-alpha/platinum-md-0.7.0.AppImage" target="_blank"><font-awesome-icon :icon="['fab', 'linux']" /> Download for Linux</a>
