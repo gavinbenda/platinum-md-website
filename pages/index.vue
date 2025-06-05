@@ -14,7 +14,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div v-if="$device.isMacOS || $device.isIos">
-            <a href="https://github.com/gavinbenda/platinum-md/releases/download/v1.2.0/platinum-md-1.2.0.dmg" target="_blank" class="button--green download-button px-5"><font-awesome-icon :icon="['fab', 'apple']" class="button-icon" /><span>Download for MacOS</span></a>
+            <a :href="macDownloadLink" target="_blank" class="button--green download-button px-5"><font-awesome-icon :icon="['fab', 'apple']" class="button-icon" /><span>Download for MacOS</span></a>
             <b-button v-b-modal.install-macos class="mt-3">Please read the Install Instructions <font-awesome-icon :icon="['fas', 'external-link-alt']" /></b-button>
           </div>
           <div v-else-if="$device.isWindows || $device.isMobile">
@@ -28,7 +28,7 @@
           <div class="other-platforms">
             <h3>Also available for other platforms</h3>
             <div v-if="!$device.isMacOS">
-              <a href="https://github.com/gavinbenda/platinum-md/releases/download/v1.2.0/platinum-md-1.2.0.dmg" target="_blank"><font-awesome-icon :icon="['fab', 'apple']" /> Download for MacOS</a>
+              <a :href="macDownloadLink" target="_blank"><font-awesome-icon :icon="['fab', 'apple']" /> Download for MacOS</a>
             </div>
             <div v-if="!$device.isWindows">
               <a href="https://github.com/gavinbenda/platinum-md/releases/download/v1.2.0/platinum-md.Setup.1.2.0.exe" target="_blank"><font-awesome-icon :icon="['fab', 'windows']" /> Download for Windows</a>
@@ -112,6 +112,20 @@ export default {
         { hid: 'og:image', name: 'og:image', content: this.url + ogImage },
         { hid: 'og:type', name: 'og:type', content: 'website' }
       ]
+    }
+  },
+  computed: {
+    isAppleSilicon () {
+      if (process.server) return false
+      const arch = navigator.userAgentData && navigator.userAgentData.architecture
+      if (arch) {
+        return arch.toLowerCase().includes('arm')
+      }
+      return /arm|apple\s?m\d/i.test(navigator.userAgent)
+    },
+    macDownloadLink () {
+      const base = 'https://github.com/gavinbenda/platinum-md/releases/download/v1.2.1/'
+      return this.isAppleSilicon ? base + 'platinum-md-1.2.1-m1-hotfix.dmg' : base + 'platinum-md-1.2.1.dmg'
     }
   }
 }
